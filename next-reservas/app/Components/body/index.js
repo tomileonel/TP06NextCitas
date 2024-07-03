@@ -2,7 +2,7 @@ import Titulo from '../titulo';
 import Subtitulo from '../subtitulo';
 import Formulario from '../form';
 import Citas from '../citas';
-import styles from './sytle-module.css'
+import styles from './style.module.css';
 
 const Body = ({ setCitas, citas }) => {
   return (

@@ -1,6 +1,6 @@
 "use client"
 
-import style from "./style-module.css"
+import styles from './style.module.css';
 import Body from '../body';
 import { useState } from "react";
 

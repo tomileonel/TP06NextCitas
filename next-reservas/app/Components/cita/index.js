@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './style-module.css'; 
+import styles from './style.module.css'; 
 
 
 const Cita = ({ mascota, dueno, fecha, hora, sintomas, date, setCitas, citas }) => {
