@@ -22,7 +22,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link href="/Contactos">
-            Contacto
+            Ayuda
           </Link>
         </li>
       </ul>

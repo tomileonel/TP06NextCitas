@@ -1,4 +1,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css?family=Staatliches");
 
 :root {
   --max-width: 1100px;

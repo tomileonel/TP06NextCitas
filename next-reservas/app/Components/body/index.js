@@ -6,20 +6,20 @@ import styles from './style.module.css';
 
 const Body = ({ setCitas, citas }) => {
   return (
-    <div className={styles.body}>
+    <div className={`body ${styles['custom-body']}`}> {/* Aplica la clase de estilos locales y la clase externa */}
       <Titulo />
-      <div className={styles.container}>
-        <div className={`${styles['one-half']} ${styles.column}`}>
+      <div className='container'>
+        <div className={`one-half column`}>
           <Subtitulo texto="CREAR MI CITA" />
           <Formulario setCitas={setCitas} citas={citas} />
         </div>
-        <div className={`${styles['one-half']} ${styles.column}`}>
+        <div className={`one-half column`}>
           <Subtitulo texto="ADMINISTRA TUS CITAS" />
           <Citas setCitas={setCitas} citas={citas} />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Body;
