@@ -1,5 +1,5 @@
 import React from 'react';
-import Cita from '../cita';
+import Cita from '../Cita';
 import styles from './style.module.css'; 
 
 const Citas = ({ citas, setCitas }) => {

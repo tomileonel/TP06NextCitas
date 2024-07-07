@@ -1,13 +1,13 @@
-import Titulo from '../titulo';
-import Subtitulo from '../subtitulo';
-import Formulario from '../form';
-import Citas from '../citas';
+import Titulo from '../Titulo';
+import Subtitulo from '../Subtitulo';
+import Formulario from '../Form';
+import Citas from '../Citas';
 import styles from './style.module.css';
 
 const Body = ({ setCitas, citas }) => {
   return (
-    <div className={`body ${styles['custom-body']}`}> {/* Aplica la clase de estilos locales y la clase externa */}
-      <Titulo />
+    <div className={`body ${styles['custom-body']}`}> 
+ 
       <div className='container'>
         <div className={`one-half column`}>
           <Subtitulo texto="CREAR MI CITA" />

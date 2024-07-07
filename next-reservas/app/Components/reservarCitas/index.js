@@ -1,7 +1,7 @@
 "use client"
 
 import styles from './style.module.css';
-import Body from '../body';
+import Body from '../Body';
 import { useState } from "react";
 
 function ReservarCitas() {
