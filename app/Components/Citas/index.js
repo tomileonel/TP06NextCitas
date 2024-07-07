@@ -7,6 +7,7 @@ const Citas = ({ citas, setCitas }) => {
     <div className={styles.citas}>
       {citas.map((cita, index) => (
         <Cita
+          key={cita.date} 
           setCitas={setCitas}
           citas={citas}
           date={cita.date}
@@ -22,3 +23,4 @@ const Citas = ({ citas, setCitas }) => {
 }
 
 export default Citas;
+

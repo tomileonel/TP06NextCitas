@@ -1,39 +1,24 @@
 "use client"
 
+import React, { useState, useEffect } from "react";
 import styles from './style.module.css';
 import Body from '../Body';
-import { useState } from "react";
 
 function ReservarCitas() {
+  const [citas, setCitas] = useState(
+    JSON.parse(localStorage.getItem('citas')) || []
+  );
 
-  const [citas, setCitas] = useState([
-    {
-      date: '1',
-      mascota: 'Luna',
-      dueno: 'Juan',
-      fecha: '2024-04-17',
-      hora: '10:00',
-      sintomas: 'Dolor de estómago'
-    },
-    {
-      date: '2',
-      mascota: 'Max',
-      dueno: 'María',
-      fecha: '2024-04-18',
-      hora: '15:30',
-      sintomas: 'Fiebre y tos'
-    },
-    {
-      date: '3',
-      mascota: 'Mario',
-      dueno: 'Bros',
-      fecha: '2024-04-18',
-      hora: '15:30',
-      sintomas: 'Extraña a luigy'
+  useEffect(() => {
+    const citasGuardadas = JSON.parse(localStorage.getItem('citas'));
+    if (citasGuardadas) {
+      setCitas(citasGuardadas);
     }
-  ]
-)
-  
+  }, []); 
+
+  useEffect(() => {
+    localStorage.setItem('citas', JSON.stringify(citas));
+  }, [citas]);
 
   return (
     <div className="App">
@@ -41,7 +26,5 @@ function ReservarCitas() {
     </div>
   );
 }
-
-
 
 export default ReservarCitas;
