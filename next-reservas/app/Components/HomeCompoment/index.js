@@ -3,7 +3,7 @@ import CardHome from '../CardHome';
 import styles from './style.module.css'; 
 import Titulo from '../Titulo';
 import Subtitulo from '../Subtitulo';
-
+import Descripcion from '../Descripcion';
 
 const Home = () => {
   const servicios = [
@@ -24,9 +24,9 @@ const Home = () => {
   return (
     <div className={styles.body}>
            <Titulo texto="Bienvenidos a VetMax"/>
-      <p className={`${styles['font-white']}`}>
-        En VETMAX nos preocupamos por la salud y bienestar de tus mascotas. Encuentra aquí todo lo que necesitas para su cuidado.
-      </p>
+
+       <Descripcion texto="En VETMAX nos preocupamos por la salud y bienestar de tus mascotas. Encuentra aquí todo lo que necesitas para su cuidado."></Descripcion> 
+
       <div>
       <Subtitulo texto="Servicios que ofrecemos" />
   
