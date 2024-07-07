@@ -1,10 +1,13 @@
 "use client"
+
 import React, { useState, useEffect } from "react";
 import styles from './style.module.css';
 import Body from '../Body';
 
 function ReservarCitas() {
-  const [citas, setCitas] = useState(null);
+  const [citas, setCitas] = useState(
+    typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('citas')) || [] : []
+  );
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -13,7 +16,7 @@ function ReservarCitas() {
         setCitas(citasGuardadas);
       }
     }
-  }, []);
+  }, []); 
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -23,7 +26,7 @@ function ReservarCitas() {
 
   return (
     <div className="App">
-      <Body setCitas={setCitas} citas={citas || []} />
+      <Body setCitas={setCitas} citas={citas} />
     </div>
   );
 }
